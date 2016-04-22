@@ -1,1 +1,12 @@
-# KTN_TP
+
+
+TAP?IRI?A UY?UN ...
+
+
+B?zi m?s?l?r var ki, sad?c? n?z?r yetirm?mi??m vaxta g?r?.
+
+
+Scriptler DB SQL-dedi?
+
+Scriptden yaratsaz DB daha yaxsi olar? Cunki Migration seed yoxdu.
+
