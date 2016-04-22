@@ -1,0 +1,10 @@
+H:\KTN\SERVICE\bin\SERVICE.dll.config
+H:\KTN\SERVICE\bin\SERVICE.dll
+H:\KTN\SERVICE\bin\SERVICE.pdb
+H:\KTN\SERVICE\obj\Debug\SERVICE.dll
+H:\KTN\SERVICE\obj\Debug\SERVICE.pdb
+H:\KTN\SERVICE\bin\EntityFramework.dll
+H:\KTN\SERVICE\bin\EntityFramework.SqlServer.dll
+H:\KTN\SERVICE\bin\EntityFramework.xml
+H:\KTN\SERVICE\bin\EntityFramework.SqlServer.xml
+H:\KTN\SERVICE\obj\Debug\SERVICE.csprojResolveAssemblyReference.cache

@@ -1,0 +1,70 @@
+﻿@model KTN.Models.IndexPersonsVM
+
+@{
+    ViewBag.Title = "Citizens";
+}
+
+<div class="row">
+     <h1>@ViewBag.Title </h1>
+
+    <ol class="breadcrumb" style="margin-bottom: 5px;">
+        <li><a href="#">Ana Səhifə</a></li>
+        <li><a href="#">Test 1</a></li>
+        <li class="active">Test 2</li>
+    </ol>
+
+
+    <br /><br />
+    <div class="col-md-8">
+
+        <table id="citizens" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Soyadı</th>
+                    <th>Adı</th>
+                    <th>Region</th>
+                    <th>SALAM</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="col-md-4">
+        <fieldset class="form-group">
+            <label for="Countries">Ölkələr</label>
+            <select id="Countries" class="form-control">
+                <option value="">Seçin...</option>
+                @foreach (var c in Model.Countries)
+                {
+                    <option value="@c.ID">@c.REGION_NAME</option>
+                }
+            </select>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="Cities">Şəhərlər / Rayonlar</label>
+            <select id="Cities" class="form-control">
+                <option value="">Seçin...</option>
+                @foreach (var c in Model.Cities)
+                {
+                    <option value="@c.ID" class="@c.P_ID">@c.REGION_NAME</option>
+                }
+            </select>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="Districts">Kəndlər</label>
+            <select id="Districts" class="form-control">
+                <option value="">Seçin...</option>
+                @foreach (var c in Model.Districts)
+                {
+                    <option value="@c.ID" class="@c.P_ID">@c.REGION_NAME</option>
+                }
+            </select>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="SearchCitizens">Axtar</label>
+            <input type="text" id="SearchCitizens" class="form-control" />
+        </fieldset>
+
+    </div>
+</div>

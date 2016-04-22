@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - KTN</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/dt.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/jquery.validate.unobtrusive.min.js" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-top">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><span>KTN<strong> PROJECT</strong></span></a>
+                </div>
+
+
+                <div class="collapse navbar-collapse" id="navbar-top">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">ANA SƏHİFƏ</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">MƏHSULLAR <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">ÇANTALAR</a></li>
+                                <li class="active"><a href="#">OYUNCAQLAR</a></li>
+                                <li><a href="category.html">ƏTİRLƏR</a></li>
+                                <li><a href="category_list.html">...</a></li>
+                                <li><a href="single.html">BOYALAR</a></li>
+                            </ul>
+                        </li>
+                        <li>@Html.ActionLink("İŞLƏK LİNK","persons", "home")</li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle signin" data-toggle="dropdown"><b>Portala giriş</b> </a>
+                            <ul id="login-dp" class="dropdown-menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            Sosial şəbəkə ilə
+                                            <div class="social-buttons">
+                                                <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                                <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                            </div>
+                                            və ya
+                                            <form class="form" role="form" method="post" action="/account/login" accept-charset="UTF-8" id="login-nav">
+                                                <div class="form-group">
+                                                    
+                                                    <input class="iform-control form-control" data-val="true" placeholder="İstifadəçi adı"  data-val-length="The field İstifadəçi adı must be a string with a maximum length of 30." data-val-length-max="30" data-val-required="The İstifadəçi adı field is required." id="email" name="UserName" type="text" value="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="password">Şifrə</label>
+<input class="input-validation-error form-control" placeholder="Şifrə" data-val="true" data-val-length="The field Şifrə must be a string with a maximum length of 30." data-val-length-max="30" data-val-required="The Şifrə field is required." id="password" name="Password" type="password">
+                                                    <div class="help-block text-right"><a href="">Şifrəni unutdun ?</a></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary btn-block">Daxil ol</button>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox"> sistemdə qal
+                                                    </label>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="bottom text-center">
+                                            <a href="#"><b>Qeydiyyat</b></a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>                    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+
+            @RenderBody()
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center">
+                Made with
+                <a href="https://www.youtube.com/watch?v=8nK1YQiaNEk&index=1&list=RD_67JHBTQ08g">music</a>
+                © @DateTime.Now.Year by <a href="https://www.linkedin.com/in/emin-javadov-73944653">Emin Javadov</a> 
+            </p>
+        </div>
+    </footer>  
+
+    <script src="~/Scripts/jquery-1.12.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.chained.min.js"></script>
+    <script src="~/Scripts/dt.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#Cities").chained("#Countries");
+            $("#Districts").chained("#Cities");
+
+            var table = $('#citizens').DataTable({
+                "ajax": {
+                    "url": "/home/citizens",
+                    "dataSrc": ""
+                },
+                "language": {
+                    "url": "/Scripts/az.js"
+                },
+                "columnDefs": [
+                    {
+                        "targets": [ 4 ],
+                        
+                        "bVisible": false, "bSearchable": true
+                    }
+                ],
+                "bInfo" : false,
+                "columns": [
+                    { "data": "ID" },
+                    { "data": "FIRST_NAME" },
+                    { "data": "LAST_NAME" },
+                    { "data": "REGION.REGION_NAME" },
+                    { "data": "REGION.ID" },
+                ]
+            });
+
+            $('#SearchCitizens').on('keyup', function () {
+                table
+                    .columns(1)
+                    .search(this.value)
+                    .draw();
+            });
+
+            $('#Districts').on('change', function () {
+                table
+                    .columns(4)
+                    .search($(this).val())
+                    .draw();
+            });
+        });
+
+    </script>
+</body>
+</html>

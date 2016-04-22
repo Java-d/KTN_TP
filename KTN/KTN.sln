@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTN", "KTN\KTN.csproj", "{D951015C-207A-42E5-B1CE-91181EFE0ECD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3C6C32E1-82CA-4E15-9A6E-C126DC686E9C} = {3C6C32E1-82CA-4E15-9A6E-C126DC686E9C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SERVICE", "..\SERVICE\SERVICE.csproj", "{3C6C32E1-82CA-4E15-9A6E-C126DC686E9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D951015C-207A-42E5-B1CE-91181EFE0ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D951015C-207A-42E5-B1CE-91181EFE0ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D951015C-207A-42E5-B1CE-91181EFE0ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D951015C-207A-42E5-B1CE-91181EFE0ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C6C32E1-82CA-4E15-9A6E-C126DC686E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6C32E1-82CA-4E15-9A6E-C126DC686E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6C32E1-82CA-4E15-9A6E-C126DC686E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6C32E1-82CA-4E15-9A6E-C126DC686E9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

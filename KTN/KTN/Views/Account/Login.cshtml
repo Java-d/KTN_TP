@@ -1,0 +1,30 @@
+﻿@model KTN.Models.LoginVM
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" style="border: 1px solid #aaa;padding :30px; border-radius: 8px; background-color:rgba(151, 213, 255, 0.1)">
+        <h2 class="text-center text-warning">
+            <i class="glyphicon glyphicon-user"></i>
+            Sistemə giriş
+        </h2>
+@Html.ValidationSummary(true)
+@using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.LabelFor(m => m.UserName, new { @class = "control-label" })
+    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.UserName)
+    <br />
+    @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+    @Html.PasswordFor(m => m.Password, new { @class="form-control"})
+    @Html.ValidationMessageFor(m => m.Password)
+  
+    <br /><br />
+    <input type="submit" value="Log in" class="form-control btn btn-warning" />
+}</div>
+    <div class="col-md-4"></div>
+    </div>
