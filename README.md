@@ -1,12 +1,15 @@
 
-
-TAP?IRI?A UY?UN ...
-
-
-B?zi m?s?l?r var ki, sad?c? n?z?r yetirm?mi??m vaxta g?r?.
+Bəzi məsələr var ki nəzər yetirməmişəm. (Tapşırıqdan kənar olduğu üçün)
 
 
-Scriptler DB SQL-dedi?
+# AOP bir nümunə.
+# 3 step Chained select. 
+# GridView filter. 
+# Ajax Load
+# WebService
+# Custom Login
 
-Scriptden yaratsaz DB daha yaxsi olar? Cunki Migration seed yoxdu.
+Scriptler DB SQL-dedi
+
+Scriptden yaratsaz DB daha yaxsi olar. Cunki Migration seed yoxdu.
 
